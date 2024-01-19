@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div>Index Page</div>
+	<div class="container">
+		<div>Index Page</div>
+	</div>
 </template>
