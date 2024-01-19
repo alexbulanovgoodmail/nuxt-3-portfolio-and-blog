@@ -6,5 +6,19 @@ export default defineNuxtConfig({
 
 	eslint: {
 		failOnError: true
+	},
+
+	css: ['~/assets/scss/main.scss'],
+
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: `
+						@use "@/assets/scss/general/variables.scss" as *;
+					`
+				}
+			}
+		}
 	}
 })

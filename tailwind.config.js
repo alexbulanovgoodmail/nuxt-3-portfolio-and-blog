@@ -9,7 +9,23 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {},
-			fontFamily: {},
+			fontFamily: {
+				serif: ['serif'],
+				sans: [
+					'Roboto',
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'"Helvetica Neue"',
+					'Arial',
+					'"Noto Sans"',
+					'sans-serif',
+					'"Apple Color Emoji"',
+					'"Segoe UI Emoji"',
+					'"Segoe UI Symbol"',
+					'"Noto Color Emoji"'
+				]
+			},
 			fontSize: {},
 			spacing: {
 				px: '1px',
