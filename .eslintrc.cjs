@@ -11,6 +11,7 @@ module.exports = {
 	root: true,
 	rules: {
 		'vue/multi-word-component-names': 'off',
-		'@typescript-eslint/no-unused-vars': ['error', { args: 'none' }]
+		'@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
+		'prettier/prettier': ['error', { printWidth: 120 }],
 	}
 }
