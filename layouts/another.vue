@@ -2,8 +2,7 @@
 
 <template>
 	<div>
-		<NuxtLayout>
-			<NuxtPage />
-		</NuxtLayout>
+		Another Layout
+		<slot />
 	</div>
 </template>

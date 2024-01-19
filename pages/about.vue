@@ -1,5 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const enableCustomLayout = () => {
+	setPageLayout('another')
+}
+</script>
 
 <template>
-	<div>About Page</div>
+	<div>
+		<div>About Page</div>
+		<button @click="enableCustomLayout">Update Layout</button>
+	</div>
 </template>
