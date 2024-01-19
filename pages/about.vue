@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useHead({
+	title: 'Обо мне'
+})
+
 const enableCustomLayout = () => {
 	setPageLayout('another')
 }
