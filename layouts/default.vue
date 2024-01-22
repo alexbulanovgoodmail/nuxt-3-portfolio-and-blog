@@ -7,6 +7,9 @@ useHead({
 <template>
 	<div>
 		<Header />
-		<slot />
+
+		<main class="mt-10">
+			<slot />
+		</main>
 	</div>
 </template>

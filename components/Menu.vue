@@ -5,13 +5,16 @@
 		<nav>
 			<ul class="flex items-center space-x-4">
 				<li>
-					<NuxtLink class="nav-link" to="/">Home</NuxtLink>
+					<NuxtLink class="nav-link" to="/">Главная</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink class="nav-link" to="/about">About</NuxtLink>
+					<NuxtLink class="nav-link" to="/about">Обо Мне</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink class="nav-link" to="/blog">Blog</NuxtLink>
+					<NuxtLink class="nav-link" to="/projects">Проекты</NuxtLink>
+				</li>
+				<li>
+					<NuxtLink class="nav-link" to="/blog">Блог</NuxtLink>
 				</li>
 			</ul>
 		</nav>
