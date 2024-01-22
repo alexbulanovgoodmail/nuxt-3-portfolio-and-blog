@@ -2,12 +2,6 @@
 useHead({
 	titleTemplate: '%s - Блог и портфолио'
 })
-
-const colorMode = useColorMode()
-
-console.log(colorMode.preference)
-
-colorMode.preference = 'dark'
 </script>
 
 <template>
