@@ -15,6 +15,7 @@
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
+		"@nuxtjs/color-mode": "^3.3.2",
 		"@nuxtjs/eslint-config-typescript": "^12.1.0",
 		"@nuxtjs/eslint-module": "^4.1.0",
 		"@nuxtjs/stylelint-module": "^5.1.0",
