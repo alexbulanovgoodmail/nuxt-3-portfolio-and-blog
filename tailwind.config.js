@@ -176,5 +176,6 @@ module.exports = {
 			},
 			maxWidth: theme => theme('spacing')
 		}
-	}
+	},
+	plugins: [require('@tailwindcss/typography')]
 }

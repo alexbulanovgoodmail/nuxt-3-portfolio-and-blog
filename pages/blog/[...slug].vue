@@ -9,7 +9,7 @@ useHead({
 <template>
 	<div>
 		<div class="container">
-			<article>
+			<article class="prose dark:prose-invert">
 				<ContentDoc />
 			</article>
 		</div>
