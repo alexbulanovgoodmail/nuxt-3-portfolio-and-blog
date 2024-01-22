@@ -9,7 +9,7 @@ const nextModeIcons = {
 
 const nextMode = computed(() => {
 	const currentModeIndex = modes.indexOf(colorMode.preference)
-	let nextModeIndex: null | number = null
+	let nextModeIndex: undefined | number
 
 	if (currentModeIndex + 1 === modes.length) {
 		nextModeIndex = 0

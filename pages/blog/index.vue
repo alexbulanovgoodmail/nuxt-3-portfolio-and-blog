@@ -5,5 +5,7 @@ useHead({
 </script>
 
 <template>
-	<div>Blog Page</div>
+	<div>
+		<div class="container">Blog Page</div>
+	</div>
 </template>

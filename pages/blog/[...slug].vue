@@ -7,5 +7,11 @@ useHead({
 </script>
 
 <template>
-	<div>Blog {{ route.params.slug }}</div>
+	<div>
+		<div class="container">
+			<article>
+				<ContentDoc />
+			</article>
+		</div>
+	</div>
 </template>

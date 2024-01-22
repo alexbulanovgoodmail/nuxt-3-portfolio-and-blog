@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 
-	modules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+	modules: [
+		'@nuxtjs/eslint-module',
+		'@nuxtjs/stylelint-module',
+		'@nuxtjs/tailwindcss',
+		'@nuxtjs/color-mode',
+		'@nuxt/content'
+	],
 
 	colorMode: {
 		classSuffix: ''
