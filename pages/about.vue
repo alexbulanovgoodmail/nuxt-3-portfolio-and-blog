@@ -1,16 +1,9 @@
-<script setup lang="ts">
-useHead({
-	title: 'Обо мне'
-})
-
-const enableCustomLayout = () => {
-	setPageLayout('another')
-}
-</script>
-
 <template>
 	<div>
-		<div>About Page</div>
-		<button @click="enableCustomLayout">Update Layout</button>
+		<div class="container">
+			<article class="prose dark:prose-invert prose-h1:text-red-400">
+				<ContentDoc path="/about" />
+			</article>
+		</div>
 	</div>
 </template>
