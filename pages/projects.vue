@@ -7,9 +7,9 @@ useHead({
 <template>
 	<div>
 		<div class="container">
-			<h2 class="mb-10 text-2xl font-semibold">Проекты</h2>
-
-			<ProjectList />
+			<article class="prose dark:prose-invert prose-h1:text-red-400">
+				<ContentDoc path="/projects" />
+			</article>
 		</div>
 	</div>
 </template>

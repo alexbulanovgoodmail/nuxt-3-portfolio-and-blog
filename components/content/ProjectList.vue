@@ -7,7 +7,7 @@ const repos = computed(() =>
 </script>
 
 <template>
-	<div>
+	<div class="not-prose">
 		<div v-if="error">Something went wrong... Try again!</div>
 		<div v-else>
 			<ul class="grid grid-cols-1 gap-4">
