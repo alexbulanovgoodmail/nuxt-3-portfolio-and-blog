@@ -2,6 +2,7 @@
 title: 'Title of the page'
 description: 'meta description of the page'
 publishedAt: 2024-03-12 17:12:00
+toc: true
 head:
     meta:
     - name: 'keywords'
