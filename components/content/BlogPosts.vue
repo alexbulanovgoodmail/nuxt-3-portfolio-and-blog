@@ -1,11 +1,22 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('blog-list', () =>
-	queryContent('/blog')
+interface Props {
+	limit?: number
+}
+
+const props = defineProps<Props>()
+
+const { data } = await useAsyncData('blog-list', () => {
+	const query = queryContent('/blog')
 		.where({ _path: { $ne: '/blog' } })
 		.only(['_path', 'title', 'publishedAt'])
 		.sort({ publishedAt: -1 })
-		.find()
-)
+
+	if (props.limit) {
+		query.limit(props.limit)
+	}
+
+	return query.find()
+})
 
 const posts = computed(() => {
 	if (!data.value) return []
@@ -26,27 +37,29 @@ const posts = computed(() => {
 </script>
 
 <template>
-	<div class="not-prose font-mono">
-		<div class="column text-sm text-gray-400">
-			<div>date</div>
-			<div>title</div>
+	<slot :posts="posts">
+		<div class="not-prose font-mono">
+			<div class="column text-sm text-gray-400">
+				<div>date</div>
+				<div>title</div>
+			</div>
+			<ul>
+				<li v-for="post in posts" :key="post._path">
+					<NuxtLink class="column hover:bg-gray-100 dark:hover:bg-gray-800" :to="post._path">
+						<div
+							:class="{
+								'text-white dark:text-gray-900': !post.displayYear,
+								'text-gray-400 dark:text-gray-500': post.displayYear
+							}"
+						>
+							{{ post.year }}
+						</div>
+						<div>{{ post.title }}</div>
+					</NuxtLink>
+				</li>
+			</ul>
 		</div>
-		<ul>
-			<li v-for="post in posts" :key="post._path">
-				<NuxtLink class="column hover:bg-gray-100 dark:hover:bg-gray-800" :to="post._path">
-					<div
-						:class="{
-							'text-white dark:text-gray-900': !post.displayYear,
-							'text-gray-400 dark:text-gray-500': post.displayYear
-						}"
-					>
-						{{ post.year }}
-					</div>
-					<div>{{ post.title }}</div>
-				</NuxtLink>
-			</li>
-		</ul>
-	</div>
+	</slot>
 </template>
 
 <style scoped lang="scss">
