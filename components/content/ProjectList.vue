@@ -14,7 +14,7 @@ const repos = computed(() =>
 				<li
 					v-for="repository in repos"
 					:key="repository.id"
-					class="border border-gray-200 rounded-sm p-4 font-mono hover:bg-gray-100"
+					class="border border-gray-200 rounded-sm p-4 font-mono dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800"
 				>
 					<a :href="repository.html_url" target="_blank">
 						<span class="flex items-center justify-between text-sm">

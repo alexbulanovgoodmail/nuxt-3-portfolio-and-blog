@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="flex items-center justify-between py-4">
 				<div class="flex items-center space-x-12">
-					<NuxtLink class="p-2 text-xl font-semibold hover:bg-gray-200" to="/">Logo.</NuxtLink>
+					<NuxtLink class="p-2 text-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-800" to="/">Logo.</NuxtLink>
 					<Menu />
 				</div>
 				<ColorModeSelector />
