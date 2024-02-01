@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-
+	nitro: {
+		prerender: {
+			routes: ['/sitemap.xml']
+		}
+	},
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' }
 	},
