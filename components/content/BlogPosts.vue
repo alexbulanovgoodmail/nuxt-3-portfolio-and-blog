@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-	limit?: number
+	limit?: number | string
 }
 
 const props = defineProps<Props>()
@@ -37,30 +37,32 @@ const posts = computed(() => {
 </script>
 
 <template>
-	<slot :posts="posts">
-		<div class="not-prose font-mono">
-			<div class="column text-sm text-gray-400">
-				<div>date</div>
-				<div>title</div>
+	<div>
+		<slot :posts="posts">
+			<div class="not-prose font-mono">
+				<div class="column text-sm text-gray-400">
+					<div>date</div>
+					<div>title</div>
+				</div>
+				<ul>
+					<li v-for="post in posts" :key="post._path">
+						<NuxtLink class="column group hover:bg-gray-100 dark:hover:bg-gray-800" :to="post._path">
+							<div
+								:class="{
+									'text-white group-hover:text-gray-100 dark:text-gray-900 dark:group-hover:text-gray-800':
+										!post.displayYear,
+									'text-gray-400 dark:text-gray-500': post.displayYear
+								}"
+							>
+								{{ post.year }}
+							</div>
+							<div>{{ post.title }}</div>
+						</NuxtLink>
+					</li>
+				</ul>
 			</div>
-			<ul>
-				<li v-for="post in posts" :key="post._path">
-					<NuxtLink class="column group hover:bg-gray-100 dark:hover:bg-gray-800" :to="post._path">
-						<div
-							:class="{
-								'text-white group-hover:text-gray-100 dark:text-gray-900 dark:group-hover:text-gray-800':
-									!post.displayYear,
-								'text-gray-400 dark:text-gray-500': post.displayYear
-							}"
-						>
-							{{ post.year }}
-						</div>
-						<div>{{ post.title }}</div>
-					</NuxtLink>
-				</li>
-			</ul>
-		</div>
-	</slot>
+		</slot>
+	</div>
 </template>
 
 <style scoped lang="scss">

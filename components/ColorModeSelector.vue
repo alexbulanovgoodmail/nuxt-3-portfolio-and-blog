@@ -33,7 +33,7 @@ const toggleMode = () => (colorMode.preference = nextMode.value)
 				>Изменить режим на {{ nextMode }}</span
 			>
 			<button
-				class="p-2 hover:bg-gray-100 dark:hover:bg-gray-400"
+				class="p-2 text-4xl hover:bg-gray-100 dark:hover:bg-gray-500 md:text-base"
 				type="button"
 				@click="toggleMode"
 				@mouseenter="showNextModeLabel = true"
